@@ -26,7 +26,7 @@ sudo ecryptfs-migrate-home -u cryptouser
 
 до шифрования:
 
-screenshots/ecryptfs_before.png
+(screenshots/ecryptfs_before.png)
 
 после шифрования:
 
