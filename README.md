@@ -43,7 +43,6 @@ sudo apt update
 sudo apt install cryptsetup -y
 ```
 
-Скриншот:
 ![3](screenshots/luks_install.png)
 
 2. Создание зашифровываемого раздела (файл-образ 100 Мб)
@@ -57,7 +56,6 @@ ls -lh ~/luks_test.img
 
 Команда ls подтверждает создание файла нужного размера.
 
-Скриншот:
 ![4](screenshots/luks_file_created.png)
 
 3. Инициализация LUKS на созданном разделе
@@ -72,7 +70,6 @@ sudo cryptsetup luksFormat ~/luks_test.img
 
 На этом этапе создаётся LUKS-контейнер, без ввода пароля данные будут недоступны.
 
-Скриншот:
 ![5](screenshots/luks_format.png)
 
 4. Открытие LUKS-контейнера
@@ -93,7 +90,6 @@ ls /dev/mapper
 sudo cryptsetup status luks_test
 ```
 
-Скриншот:
 ![6](screenshots/luks_open.png)
 
 5. Создание файловой системы на LUKS-разделе
@@ -106,7 +102,6 @@ sudo mkfs.ext4 /dev/mapper/luks_test
 
 Этот шаг подтверждает, что зашифрованный раздел готов к хранению данных.
 
-Скриншот:
 ![7](screenshots/luks_mkfs.png)
 
 6. Монтирование LUKS-раздела и работа с данными
@@ -133,7 +128,6 @@ ls -la ~/luks_mount
 
 Файл успешно создан, данные автоматически шифруются на уровне LUKS.
 
-Скриншоты:
 ![8](screenshots/luks_mounted_empty.png)
 ![9](screenshots/luks_mounted_file.png) 
 
@@ -154,5 +148,4 @@ ls /dev/mapper
 
 Отсутствие luks_test подтверждает, что контейнер закрыт и данные защищены.
 
-Скриншот:
 ![10](screenshots/luks_closed.png)
