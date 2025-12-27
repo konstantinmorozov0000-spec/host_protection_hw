@@ -118,6 +118,7 @@ sudo mount /dev/mapper/luks_test ~/luks_mount
 ```
 ls -la ~/luks_mount
 ```
+![8](screenshots/luks_mounted_empty.png)
 
 Создаём тестовый файл внутри зашифрованного раздела:
 
@@ -128,7 +129,6 @@ ls -la ~/luks_mount
 
 Файл успешно создан, данные автоматически шифруются на уровне LUKS.
 
-![8](screenshots/luks_mounted_empty.png)
 ![9](screenshots/luks_mounted_file.png) 
 
 7. Отмонтирование и закрытие LUKS-контейнера
